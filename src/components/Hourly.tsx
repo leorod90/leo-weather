@@ -70,6 +70,7 @@ export default function Hourly({index, i, hour}: Props) {
                     flex: 1,
                     alignItems: 'center',
                     marginTop: Styles.screenPadding / 2,
+                    paddingTop: 5,
                     justifyContent: 'center',
                   }}>
                   <Logo width={SIZE} height={SIZE} fill={'white'} />

@@ -5,9 +5,7 @@ export const SEARCH_COORDINATE = 'SEARCH_COORDINATE';
 import axios from 'axios';
 import image_style from '../data/image_style';
 import formatDt from '../functions/formatDt';
-
-const GOOGLE_API = 'AIzaSyCDSBWHgxAUVslf_TqwF2DS8ddY6i6WBSA';
-const WEATHER_API = '781c956777135cd195e553d194591727';
+import {GOOGLE_API, WEATHER_API} from 'react-native-dotenv';
 
 const EXCLUDE = ['minutely', 'alerts'];
 

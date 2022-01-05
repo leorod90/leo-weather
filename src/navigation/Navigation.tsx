@@ -4,6 +4,7 @@ import {rootState} from '../redux/store';
 import OnboardScreen from '../screens/OnboardScreen';
 import MainScreen from '../screens/MainScreen';
 import {setCityName} from '../redux/actions';
+import SplashScreen from 'react-native-splash-screen';
 
 export default function Navigation() {
   const threeDay = useSelector((state: rootState) => state.reducers.threeDay);
@@ -15,6 +16,7 @@ export default function Navigation() {
     if (threeDay === undefined || threeDay.length == 0) {
       dispatch(setCityName(city));
     }
+    SplashScreen.hide();
   }, []);
 
   if (

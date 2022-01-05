@@ -11,7 +11,8 @@ export default function DelayAnimations({index, active, children}: Props) {
   const startScale = 0;
   const endScale = 1;
   const speed = 800;
-  const delay = index * 250;
+  const delay = index * 200 - index + 1 * 150;
+  const delay2 = index * 5;
 
   const animValue = React.useRef(new Animated.Value(startScale)).current;
   const animation = () => {
@@ -24,7 +25,7 @@ export default function DelayAnimations({index, active, children}: Props) {
   };
   const animationTwo = () => {
     Animated.timing(animValue, {
-      delay,
+      delay: delay2,
       toValue: 0,
       duration: speed,
       useNativeDriver: true,

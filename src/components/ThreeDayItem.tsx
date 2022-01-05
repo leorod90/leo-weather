@@ -5,7 +5,6 @@ import image_style from '../data/image_style';
 import Styles from '../constants/Styles';
 
 const {width, height} = Dimensions.get('screen');
-console.log(height);
 
 interface Props {
   item: any;
