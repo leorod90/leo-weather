@@ -11,7 +11,7 @@ import {composeWithDevTools} from 'redux-devtools-extension';
 const persistConfig = {
   key: 'root',
   storage: AsyncStorage,
-  blacklist: ['indexReducer'],
+  // blacklist: ['indexReducer'],
 };
 
 const rootReducer = combineReducers({reducers, indexReducer});

@@ -97,7 +97,7 @@ def enableSeparateBuildPerCPUArchitecture = false
 /**
  * Run Proguard to shrink the Java bytecode in release builds.
  */
-def enableProguardInReleaseBuilds = true
+def enableProguardInReleaseBuilds = false
 
 /**
  * The preferred build flavor of JavaScriptCore.
@@ -135,8 +135,7 @@ android {
         applicationId 'com.leo_weather'
         minSdkVersion rootProject.ext.minSdkVersion
         targetSdkVersion rootProject.ext.targetSdkVersion
-        versionCode 2
-        versionName '1.1'
+        versionCode 5
     }
     splits {
         abi {
@@ -199,8 +198,6 @@ android {
 dependencies {
     implementation 'com.google.android.gms:play-services-base:16.0.1'
     implementation 'com.google.android.gms:play-services-location:16.0.0'
-
-    // implementation project(':react-native-location')
 
     implementation fileTree(dir: 'libs', include: ['*.jar'])
     //noinspection GradleDynamicVersion
